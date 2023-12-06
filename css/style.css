@@ -56,7 +56,7 @@ body{
 
 /* ==============custom css========== */
 h1{
-    font-size: 3rem;
+    font-size: 4.5vw;
     font-weight: 400;
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -78,7 +78,9 @@ h4{
     color: var(--white-color);
     transition: all .3s linear;
 }
-
+a{
+    text-decoration: none;
+}
 .main-btn{
     height: 40px;
     line-height: 40px;
@@ -99,23 +101,23 @@ h4{
     left: 0;
     width: 100%;
     height: 1px;
+    content: "";
     transition: all .5s ease-out 0s;
     transform: translateX(-20px);
+    transform: translateY(-20px)
 }
 .main-btn::after{
     transform: translateX(20px);
     -webkit-transform: translateY(20px);
 }
-.main-btn:hover::after{
-    transform: rotate(20deg);
-    -webkit-transform: translateY(20px);
-}
+
 .main-btn:hover::before{
     transform: rotate(20deg);
     -webkit-transform: rotate(20deg);
     background-color: var(--primary-color);
 }
-.main-btn:hover::before{
+
+.main-btn:hover::after{
     transform: rotate(-20deg);
     -webkit-transform: rotate(-20deg);
     background-color: var(--primary-color);
@@ -149,6 +151,16 @@ h4{
     font-size: 15px;
     letter-spacing: 0.5px;
 }
+
+/* navbar */
+.navication-wrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 100000;
+}
+
+
 .navbar-toggler{
     border: none;
     font-size: 30px;
@@ -157,4 +169,45 @@ h4{
     outline: unset;
     border: none;
     box-shadow: none;
+}
+.navication-wrap .nav-item{
+    padding: 0 10px;
+}
+.navication-wrap .nav-link{
+    text-transform: uppercase;
+    color: var(--white-color);
+    letter-spacing: 0.5px;
+}
+.navication-wrap .nav-link{
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.navication-wrap .nav-link:hover,
+.navication-wrap .nav-link:active{
+    color: var(--primary-color);
+}
+/* ///navication change */
+.navication-wrap.scroll-on{
+    background-color: var(--black-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 2px 2px 2px white;
+    transition: all .15s ease-in-out 0s;
+}
+.navication-wrap.scroll-on .nav-link:hover,
+.navication-wrap.scroll-on .nav-link:active{
+    color: var(--primary-color);
+
+}
+
+/* caption */
+#home .carousel-caption{
+    top: 15rem;
+}
+#home .carousel-caption p{
+    width: 70%;
+    margin: 1rem auto;
 }
