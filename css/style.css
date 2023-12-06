@@ -205,9 +205,12 @@ a{
 
 /* caption */
 #home .carousel-caption{
-    top: 15rem;
+    top: 30%;
 }
 #home .carousel-caption p{
     width: 70%;
     margin: 1rem auto;
+}
+.btn-nav{
+    color: #fff;
 }
